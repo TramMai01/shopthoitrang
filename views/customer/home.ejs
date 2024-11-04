@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fashion Store</title>
+
+        <!-- Thêm liên kết Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+        <!-- Thêm tệp CSS -->
+        <link href="/css/home.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="container-header d-flex justify-content-center align-items-center">
+                <!-- Logo nằm giữa -->
+                <img src="/images/LOGO.png" alt="Logo" class="logo-img">
+                
+                <!-- Phần icon nằm ngang với logo và sát phải -->
+                <div class="icon-section d-flex ms-auto">
+                    <a href="#" class="nav-link me-4"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-link me-4"><i class="fas fa-user"></i></a>
+                    <a href="/customer/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+
+                </div>
+            </div>
+        
+            <!-- Menu nằm dưới logo và icon -->
+    <nav class="nav justify-content-center mt-3">
+        <ul class="nav d-flex mb-0">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="boyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mens</a>
+                <ul class="dropdown-menu" aria-labelledby="boyDropdown">
+                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                    <li><a class="dropdown-item" href="#">Tops</a></li>
+                    <li><a class="dropdown-item" href="#">Shirts</a></li>
+                    <li><a class="dropdown-item" href="#">Sweaters</a></li>
+                    <li><a class="dropdown-item" href="#">Bottoms</a></li>
+                    <li><a class="dropdown-item" href="#">Pants</a></li>
+                    <li><a class="dropdown-item" href="#">Shorts</a></li>
+                    <li><a class="dropdown-item" href="#">Sets</a></li>
+                    <li><a class="dropdown-item" href="#">Suits</a></li>
+                    <li><a class="dropdown-item" href="#">Basics</a></li>
+                    <li><a class="dropdown-item" href="#">Knitwear</a></li>
+                    <li><a class="dropdown-item" href="#">Lounge & Playwear</a></li>
+                    <li><a class="dropdown-item" href="#">Outerwear</a></li>
+                    <li><a class="dropdown-item" href="#">Swimwear</a></li>
+                    <li><a class="dropdown-item" href="#">Uniforms</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="girlDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Womens</a>
+                <ul class="dropdown-menu" aria-labelledby="girlDropdown">
+                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                    <li><a class="dropdown-item" href="#">Dresses</a></li>
+                    <li><a class="dropdown-item" href="#">Tops</a></li>
+                    <li><a class="dropdown-item" href="#">Shirts</a></li>
+                    <li><a class="dropdown-item" href="#">Sweaters</a></li>
+                    <li><a class="dropdown-item" href="#">Bottoms</a></li>
+                    <li><a class="dropdown-item" href="#">Pants</a></li>
+                    <li><a class="dropdown-item" href="#">Shorts</a></li>
+                    <li><a class="dropdown-item" href="#">Sets</a></li>
+                    <li><a class="dropdown-item" href="#">Basics</a></li>
+                    <li><a class="dropdown-item" href="#">Knitwear</a></li>
+                    <li><a class="dropdown-item" href="#">Swimwear</a></li>
+                    <li><a class="dropdown-item" href="#">Outerwear</a></li>
+                    <li><a class="dropdown-item" href="#">Uniforms</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Bestseller</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sales</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </nav> 
+        </header>
+        
+        
+
+        <!-- Hero Section -->
+        <section class="bg-cover bg-center text-white" style="background-image: url('/images/home2.png'); height: 70vh;">
+            <div class="container h-100 d-flex align-items-center">
+                <div class="text-center w-100">
+                    <h2 class="display-4 font-weight-bold mb-4">Summer Collection 2024</h2>
+                    <p class="lead mb-4">Discover the latest trends in fashion and get inspired by our new styles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlights -->
+        <section class="py-5 product-section">
+            <div class="container">
+                <h3 class="text-center mb-4">BESTSELLER FOR SHOP</h3>
+                <div class="row">
+                    <!-- Sản phẩm 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do1.jpg" alt="Product 1" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Váy jean</h4>
+                                <p class="card-text">200,000Đ</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sản phẩm 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do2.jpg" alt="Product 2" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Casual Jacket</h4>
+                                <p class="card-text">$129.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sản phẩm 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/do5.jpg" alt="Product 3" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Elegant Shoes</h4>
+                                <p class="card-text">$79.99</p>
+                                <a href="#" class="btn btn-pink">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container text-center">
+                <p>&copy; 2024 Fashion Store. All rights reserved.</p>
+            </div>
+        </footer>
+    <!-- Thêm tệp JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

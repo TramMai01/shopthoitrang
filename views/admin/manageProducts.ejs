@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        table img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('../partials/adminnavbar', { adminName: adminName }) %>
+    <div class="container content">
+        <h1 class="mb-4">Quản lý sản phẩm</h1>
+
+        <!-- Nút Thêm sản phẩm -->
+        <a href="/admin/addProduct" class="btn btn-primary mb-3">Thêm sản phẩm</a>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>STT</th> <!-- Cột STT -->
+                        <th>Loại sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Mô tả</th>
+                        <th>Màu sắc</th>
+                        <th>Kích thước</th>
+                        <th>Số lượng</th>
+                        <th>Hình ảnh</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach((product, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= product.type %></td>
+                            <td><%= product.name %></td>
+                            <td><%= product.price %> VND</td>
+                            <td><%= product.description %></td>
+                            <td><%= product.color %></td>
+                            <td><%= product.size %></td>
+                            <td><%= product.quantity %></td> <!-- Hiển thị số lượng -->
+                            <td>
+                                <% product.images.forEach(image => { %>
+                                    <img src="<%= image %>" alt="<%= product.name %>" style="max-width: 50px; max-height: 50px; margin-right: 5px;">
+                                <% }); %>
+                            </td>
+                            <td>
+                                <a href="/admin/editProduct/<%= product._id %>" class="btn btn-warning btn-sm">Sửa</a>
+                                <button onclick="confirmDelete('<%= product._id %>')" class="btn btn-danger btn-sm">Xóa</button>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function confirmDelete(productId) {
+            if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?")) {
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/admin/deleteProduct/' + productId;
+                document.body.appendChild(form);
+                form.submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

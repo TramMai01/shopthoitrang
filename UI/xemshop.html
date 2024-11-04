@@ -1,0 +1,428 @@
+<html>
+ <head>
+  <title>
+   Shop Page
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 16px;
+        }
+        .categories, .shop-by-price, .shop-by-size {
+            margin-bottom: 30px;
+        }
+        .categories ul, .shop-by-size ul {
+            list-style: none;
+            padding: 0;
+        }
+        .categories ul li, .shop-by-size ul li {
+            margin-bottom: 10px;
+        }
+        .categories ul li a, .shop-by-size ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .categories ul li a:hover, .shop-by-size ul li a:hover {
+            text-decoration: underline;
+        }
+        .product {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .product .old-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .product .new {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: green;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .product .sale {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .product .out-of-stock {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: blue;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .pagination {
+            justify-content: center;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <div class="container">
+    <a class="navbar-brand" href="#">
+     Ashion
+    </a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Home
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Women's
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Men's
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Shop
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Pages
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Blog
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <div class="container mt-4">
+   <div class="row">
+    <div class="col-md-3">
+     <div class="categories">
+      <h5>
+       CATEGORIES
+      </h5>
+      <ul>
+       <li>
+        <a href="#">
+         Women
+        </a>
+       </li>
+       <ul>
+        <li>
+         <a href="#">
+          Coats
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          Jackets
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          Dresses
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          Shirts
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          T-shirts
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          Jeans
+         </a>
+        </li>
+       </ul>
+       <li>
+        <a href="#">
+         Men
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Kids
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Accessories
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Cosmetic
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="shop-by-price">
+      <h5>
+       SHOP BY PRICE
+      </h5>
+      <input class="form-range" id="priceRange" max="99" min="33" type="range"/>
+      <p>
+       Price: $33 - $99
+      </p>
+      <button class="btn btn-outline-dark">
+       FILTER
+      </button>
+     </div>
+     <div class="shop-by-size">
+      <h5>
+       SHOP BY SIZE
+      </h5>
+      <ul>
+       <li>
+        <input type="checkbox"/>
+        XXS
+       </li>
+       <li>
+        <input type="checkbox"/>
+        XS
+       </li>
+       <li>
+        <input type="checkbox"/>
+        XS-S
+       </li>
+       <li>
+        <input type="checkbox"/>
+        S
+       </li>
+       <li>
+        <input type="checkbox"/>
+        M
+       </li>
+       <li>
+        <input type="checkbox"/>
+        M-L
+       </li>
+       <li>
+        <input type="checkbox"/>
+        L
+       </li>
+       <li>
+        <input type="checkbox"/>
+        XL
+       </li>
+      </ul>
+     </div>
+     <div class="shop-by-size">
+      <h5>
+       SHOP BY COLOR
+      </h5>
+      <ul>
+       <li>
+        <input type="checkbox"/>
+        Blacks
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Whites
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Reds
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Greys
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Blues
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Beige Tones
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Greens
+       </li>
+       <li>
+        <input type="checkbox"/>
+        Yellows
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-md-9">
+     <div class="row">
+      <div class="col-md-4 product">
+       <div class="position-relative">
+        <span class="new">
+         NEW
+        </span>
+        <img alt="Furry hooded parka" height="400" src="https://storage.googleapis.com/a1aa/image/Gex2mms6KA20BaVJ8LTfBNaSFT99Rr5OGkqQnK5OVufiQ8TnA.jpg" width="300"/>
+       </div>
+       <p>
+        Furry hooded parka
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <img alt="Flowy striped skirt" height="400" src="https://storage.googleapis.com/a1aa/image/WTqvHqMBW8oGFFfMHveuoYeZAGpgXrAQPesMnijbI6Crg4nOB.jpg" width="300"/>
+       <p>
+        Flowy striped skirt
+       </p>
+       <p class="price">
+        $49.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <img alt="Croc-effect bag" height="400" src="https://storage.googleapis.com/a1aa/image/tQZje3wpu0S8b6XmlffnfoqOWqhad2XEfYRnpmBoyh4MBxPdC.jpg" width="300"/>
+       <p>
+        Croc-effect bag
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <img alt="Dark wash Xavi jeans" height="400" src="https://storage.googleapis.com/a1aa/image/m3yg736gxtYqANoOnDijq5drCGNfvx518XNz1LYFjLAGEfpTA.jpg" width="300"/>
+       <p>
+        Dark wash Xavi jeans
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <div class="position-relative">
+        <span class="sale">
+         SALE
+        </span>
+        <img alt="Ankle-cuff sandals" height="400" src="https://storage.googleapis.com/a1aa/image/0MBjTUgHesXiUSXJ6PzwL6NIbBRvTebOS93xG31NX40OIeTnA.jpg" width="300"/>
+       </div>
+       <p>
+        Ankle-cuff sandals
+       </p>
+       <p class="price">
+        <span class="old-price">
+         $69.0
+        </span>
+        $49.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <img alt="Contrasting sunglasses" height="400" src="https://storage.googleapis.com/a1aa/image/f3VCgXNKVAVLMaFBq5f0DxZ2Yr9ReAf5hXZHVc8ynEUAh4nOB.jpg" width="300"/>
+       <p>
+        Contrasting sunglasses
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <img alt="Circular pendant earrings" height="400" src="https://storage.googleapis.com/a1aa/image/deJXHhflCjq4ckWX2Q7hS5L3GOURPcfafWHflGRS08N3AxPdC.jpg" width="300"/>
+       <p>
+        Circular pendant earrings
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <div class="position-relative">
+        <span class="out-of-stock">
+         OUT OF STOCK
+        </span>
+        <img alt="Cotton T-Shirt" height="400" src="https://storage.googleapis.com/a1aa/image/G0VCufUKB6xBf0f9kypPeFVhtjLc1oJ9Rg5c5XeDE8B9AxPdC.jpg" width="300"/>
+       </div>
+       <p>
+        Cotton T-Shirt
+       </p>
+       <p class="price">
+        $59.0
+       </p>
+      </div>
+      <div class="col-md-4 product">
+       <div class="position-relative">
+        <span class="sale">
+         SALE
+        </span>
+        <img alt="Water resistant zips backpack" height="400" src="https://storage.googleapis.com/a1aa/image/d97kE6lset3eQkCQ5JYejxjYy0PJ5SfB5nhiqucv8AP1g4nOB.jpg" width="300"/>
+       </div>
+       <p>
+        Water resistant zips backpack
+       </p>
+       <p class="price">
+        <span class="old-price">
+         $59.0
+        </span>
+        $49.0
+       </p>
+      </div>
+     </div>
+     <nav>
+      <ul class="pagination">
+       <li class="page-item">
+        <a class="page-link" href="#">
+         1
+        </a>
+       </li>
+       <li class="page-item">
+        <a class="page-link" href="#">
+         2
+        </a>
+       </li>
+       <li class="page-item">
+        <a class="page-link" href="#">
+         3
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </div>
+  </div>
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Y5q5Y5n1p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6+5p6
+ </body>
+</html>

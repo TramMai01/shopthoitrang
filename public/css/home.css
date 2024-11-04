@@ -1,0 +1,169 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f388d8; /* Màu nền nhẹ hơn */
+    font-family: Arial, sans-serif; /* Đặt font chữ cho toàn bộ trang */
+    padding-top: 150px; /* Điều chỉnh phù hợp với kích thước header */
+}
+
+h1 {
+    color: #eb43cf; /* Đặt màu chữ cho tiêu đề */
+    font-size: 2.5rem; /* Kích thước chữ lớn hơn */
+    margin: 0; /* Gỡ bỏ margin */
+}
+
+/* Header chỉnh sửa */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Giảm padding để header hẹp hơn */
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Đặt logo ở giữa */
+    position: relative;
+    width: 100%;
+}
+
+/* Căn chỉnh icon nằm ngang với logo và sát phải */
+.icon-section {
+    position: absolute;
+    right: 20px; /* Đẩy icon sát về bên phải */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo ở giữa */
+.logo-img {
+    width: 100px; /* Giảm kích thước logo để phù hợp với header hẹp hơn */
+    height: auto;
+}
+
+/* Icon */
+.nav-link {
+    margin: 0 10px; /* Giảm khoảng cách giữa các icon */
+    text-decoration: none;
+    color: #343a40;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #ff4d94; /* Màu khi hover */
+}
+
+/* Menu */
+.nav {
+    margin-top: 5px; /* Giảm khoảng cách giữa logo và menu */
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+/* Khi di chuột vào .nav-item thì hiển thị menu thả xuống */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Đảm bảo menu không bị lệch khi hiện ra */
+}
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+/* Khung Modal */
+#loginModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Tối hơn để nổi bật modal */
+    display: none; /* Mặc định không hiển thị */
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Đảm bảo modal nổi bật hơn */
+}
+
+.modal-dialog {
+    max-width: 500px; /* Đặt chiều rộng tối đa cho dialog */
+    width: 90%; /* Đặt chiều rộng cho khung */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Màu nền trắng cho khung modal */
+    border-radius: 12px; /* Đặt bo tròn cho các góc */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Đổ bóng cho khung modal */
+}
+
+.text-pink-600 {
+    color: #ff4d94; /* Màu hồng cho liên kết */
+}
+
+.text-pink-600:hover {
+    color: #ff4081; /* Màu hồng khi hover */
+}
+
+/* Màu nút */
+.btn-pink {
+    background-color: #ff4d94; /* Màu nền của nút */
+    color: white; /* Màu chữ của nút */
+    border-radius: 50px; /* Bo tròn nút */
+}
+
+.btn-pink:hover {
+    background-color: #ff4081; /* Màu nền khi hover */
+    color: white; /* Giữ nguyên màu chữ khi hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Cải thiện kiểu hiển thị cho các sản phẩm */
+.card {
+    border: none; /* Gỡ bỏ viền cho các card */
+    border-radius: 10px; /* Bo tròn góc cho các card */
+    overflow: hidden; /* Ẩn phần thừa */
+}
+
+.card-img-top {
+    transition: transform 0.3s; /* Hiệu ứng zoom hình ảnh */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Phóng to hình ảnh khi hover */
+}
+
+.product-section {
+    background-color: #f1a7b5; /* Nền hồng nhạt cho phần sản phẩm */
+    border-radius: 12px; /* Bo tròn góc cho phần sản phẩm */
+    padding: 40px; /* Padding cho phần sản phẩm */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần sản phẩm */
+}
+
+/* Responsive chỉnh sửa cho phần sản phẩm */
+@media (max-width: 768px) {
+    .product-section {
+        padding: 20px; /* Giảm padding khi màn hình nhỏ */
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}

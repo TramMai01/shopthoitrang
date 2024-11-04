@@ -1,0 +1,319 @@
+<html>
+ <head>
+  <title>
+   Admin Page
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+        .content {
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .status-pending {
+            color: red;
+        }
+        .btn-detail {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .navbar-custom {
+    background-color: #ffd1e8; /* Màu hồng */
+}
+
+  </style>
+ </head>
+ <body>
+    <%- include('../partials/adminnavbar', { adminName: adminName }) %>
+   <div class="content flex-grow-1">
+    <nav class="navbar navbar-light navbar-custom">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">
+                Trang chủ
+            </span>
+        </div>
+    </nav>
+    
+    <div class="tab-content" id="v-pills-tabContent">
+     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+      <div class="container-fluid mt-3">
+       <div class="row">
+        <div class="col-md-3">
+         <div class="card text-white bg-success">
+          <div class="card-body">
+           <h5 class="card-title">
+            50
+           </h5>
+           <p class="card-text">
+            Sản Phẩm
+           </p>
+           <a class="btn btn-light" href="#">
+            Xem tiếp
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-3">
+         <div class="card text-white bg-danger">
+          <div class="card-body">
+           <h5 class="card-title">
+            8
+           </h5>
+           <p class="card-text">
+            Loại sản phẩm
+           </p>
+           <a class="btn btn-light" href="#">
+            Xem tiếp
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-3">
+         <div class="card text-white bg-info">
+          <div class="card-body">
+           <h5 class="card-title">
+            2
+           </h5>
+           <p class="card-text">
+            Số Tài Khoản
+           </p>
+           <a class="btn btn-light" href="#">
+            Xem tiếp
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-3">
+         <div class="card text-white bg-warning">
+          <div class="card-body">
+           <h5 class="card-title">
+            14
+           </h5>
+           <p class="card-text">
+            Số Lượng HDB
+           </p>
+           <a class="btn btn-light" href="#">
+            Xem tiếp
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <h5 class="mt-4">
+        DANH SÁCH HÓA ĐƠN BÁN
+       </h5>
+       <div class="table-responsive">
+        <table class="table table-bordered">
+         <thead>
+          <tr>
+           <th>
+            STT
+           </th>
+           <th>
+            Tên KH
+           </th>
+           <th>
+            Địa Chỉ
+           </th>
+           <th>
+            Email
+           </th>
+           <th>
+            Số ĐT
+           </th>
+           <th>
+            Ngày Bán
+           </th>
+           <th>
+            Tổng Tiền
+           </th>
+           <th>
+            Trạng Thái
+           </th>
+           <th>
+            Chức Năng
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            1
+           </td>
+           <td>
+            Nguyễn Thị Đào
+           </td>
+           <td>
+            Khoái Châu - Hưng Yên
+           </td>
+           <td>
+            dothithuylinh1989@gmail.com
+           </td>
+           <td>
+            0354499966
+           </td>
+           <td>
+            2019-05-05
+           </td>
+           <td>
+            123,000
+           </td>
+           <td class="status-pending">
+            Chưa duyệt
+           </td>
+           <td>
+            <button class="btn btn-detail">
+             Chi Tiết
+            </button>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            2
+           </td>
+           <td>
+            Trương
+           </td>
+           <td>
+            Yên Mỹ - Hưng Yên
+           </td>
+           <td>
+            truongthanh1800@gmail.com
+           </td>
+           <td>
+            0354109966
+           </td>
+           <td>
+            2019-05-05
+           </td>
+           <td>
+            118,000
+           </td>
+           <td class="status-pending">
+            Chưa duyệt
+           </td>
+           <td>
+            <button class="btn btn-detail">
+             Chi Tiết
+            </button>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            3
+           </td>
+           <td>
+            Nguyễn Thị Yến
+           </td>
+           <td>
+            Yên Mỹ - Hưng Yên
+           </td>
+           <td>
+            tyen091@gmail.com
+           </td>
+           <td>
+            0354109966
+           </td>
+           <td>
+            2019-05-05
+           </td>
+           <td>
+            118,000
+           </td>
+           <td class="status-pending">
+            Chưa duyệt
+           </td>
+           <td>
+            <button class="btn btn-detail">
+             Chi Tiết
+            </button>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            4
+           </td>
+           <td>
+            Nguyễn Thị Thảo
+           </td>
+           <td>
+            Khoái Châu - Hưng Yên
+           </td>
+           <td>
+            dothithuylinh1989@gmail.com
+           </td>
+           <td>
+            0354499966
+           </td>
+           <td>
+            2019-05-05
+           </td>
+           <td>
+            123,000
+           </td>
+           <td class="status-pending">
+            Chưa duyệt
+           </td>
+           <td>
+            <button class="btn btn-detail">
+             Chi Tiết
+            </button>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="tab-pane fade" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab">
+      <div class="container-fluid mt-3">
+       <h5>
+        Quản lý sản phẩm
+       </h5>
+       <!-- Add your content for Quản lý sản phẩm here -->
+      </div>
+     </div>
+     <div class="tab-pane fade" id="v-pills-product-types" role="tabpanel" aria-labelledby="v-pills-product-types-tab">
+      <div class="container-fluid mt-3">
+       <h5>
+        Quản lý loại sản phẩm
+       </h5>
+       <!-- Add your content for Quản lý loại sản phẩm here -->
+      </div>
+     </div>
+     <div class="tab-pane fade" id="v-pills-accounts" role="tabpanel" aria-labelledby="v-pills-accounts-tab">
+      <div class="container-fluid mt-3">
+       <h5>
+        Quản lý tài khoản
+       </h5>
+       <!-- Add your content for Quản lý tài khoản here -->
+      </div>
+     </div>
+     <div class="tab-pane fade" id="v-pills-invoices" role="tabpanel" aria-labelledby="v-pills-invoices-tab">
+      <div class="container-fluid mt-3">
+       <h5>
+        Quản lý hóa đơn nhập
+       </h5>
+       <!-- Add your content for Quản lý hóa đơn nhập here -->
+      </div>
+     </div>
+     <div class="tab-pane fade" id="v-pills-employees" role="tabpanel" aria-labelledby="v-pills-employees-tab">
+      <div class="container-fluid mt-3">
+       <h5>
+        Quản lý nhân viên
+       </h5>
+       <!-- Add your content for Quản lý nhân viên here -->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWld/H7Qp6i6jz9z5+5hb7ie6o5e5e5e5e5e5e5e5" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+ </body>
+</html>

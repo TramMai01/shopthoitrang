@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Màu nền sáng */
+        }
+        .container {
+            background-color: #fff; /* Màu nền trắng cho container */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #ff6f61; /* Màu hồng nhạt */
+        }
+        .form-control {
+            border-color: #ff6f61; /* Màu viền cho các trường nhập */
+        }
+        .form-label {
+            color: #ff6f61; /* Màu chữ cho label */
+        }
+        .btn-primary {
+            background-color: #ff6f61; /* Màu nút lưu */
+            border-color: #ff6f61; /* Màu viền nút lưu */
+        }
+        .btn-primary:hover {
+            background-color: #ff4f3e; /* Màu nút lưu khi hover */
+            border-color: #ff4f3e; /* Màu viền nút lưu khi hover */
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/adminnavbar', { adminName: adminName }) %>
+    <div class="container">
+        <h1>Sửa Sản Phẩm</h1>
+        <form action="/admin/editProduct/<%= product._id %>" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên Sản Phẩm</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Mô Tả</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required><%= product.description %></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Giá (VND)</label>
+                <input type="number" class="form-control" id="price" name="price" value="<%= product.price %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Loại Sản Phẩm</label>
+                <select class="form-control" id="type" name="type" required>
+                    <option value="áo" <%= product.type === 'áo' ? 'selected' : '' %>>Áo</option>
+                    <option value="quần" <%= product.type === 'quần' ? 'selected' : '' %>>Quần</option>
+                    <option value="phụ kiện" <%= product.type === 'phụ kiện' ? 'selected' : '' %>>Phụ Kiện</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="color" class="form-label">Màu Sắc</label>
+                <input type="text" class="form-control" id="color" name="color" value="<%= product.color %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="size" class="form-label">Kích Thước</label>
+                <input type="text" class="form-control" id="size" name="size" value="<%= product.size %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Hình Ảnh</label>
+                <input type="file" class="form-control" id="image" name="image">
+                <small class="form-text text-muted">Chọn hình ảnh mới (nếu có).</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
